@@ -8,7 +8,6 @@ import org.mapstruct.factory.Mappers;
 @Mapper(componentModel = "spring")
 public interface InstructorMapper {
 
-    InstructorMapper INSTANCE = Mappers.getMapper(InstructorMapper.class);
 
     InstructorDTO toDTO(Instructor instructor);
     Instructor toEntity(InstructorDTO instructorDTO);

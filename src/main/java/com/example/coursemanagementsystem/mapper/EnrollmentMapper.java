@@ -9,8 +9,6 @@ import org.mapstruct.factory.Mappers;
 @Mapper(componentModel = "spring")
 public interface EnrollmentMapper {
 
-    EnrollmentMapper INSTANCE = Mappers.getMapper(EnrollmentMapper.class);
-
     @Mapping(source = "student.id", target = "studentId")
     @Mapping(source = "course.id", target = "courseId")
     EnrollmentDTO toDTO(Enrollment enrollment);
